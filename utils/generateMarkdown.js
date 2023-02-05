@@ -123,10 +123,10 @@ function generateMarkdown(inquirerAnswers, githubInfo) {
  GitHub: [@${githubInfo.login}](${githubInfo.url})
  `;
 
- if (githubInfo.email !== null) {
+ if (inquirerAnswers.email !== null) {
    developer +=
      `
-       Email: ${githubInfo.email}
+       Email: ${inquirerAnswers.email}
      `};
    markdown += developer;
    return markdown;
