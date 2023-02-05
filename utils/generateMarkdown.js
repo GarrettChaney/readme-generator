@@ -121,15 +121,11 @@ function generateMarkdown(inquirerAnswers, githubInfo) {
  For any questions, please contact me at:
 
  GitHub: [@${githubInfo.login}](${githubInfo.url})
+ Email: @${inquirerAnswers.email}
  `;
 
- if (inquirerAnswers.email !== null) {
-   developer +=
-     `
-       Email: ${inquirerAnswers.email}
-     `};
-   markdown += developer;
-   return markdown;
+  markdown += developer;
+  return markdown;
 
 }
 
